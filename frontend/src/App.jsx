@@ -54,18 +54,18 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-100 py-10 px-4">
       <div className="max-w-xl mx-auto">
-        <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Todo App</h1>
+        {/* <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Todo App</h1> */}
 
         <form onSubmit={addTodo} className="flex gap-2 mb-6">
           <input
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Add a new todo..."
-            className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/500"
+            className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"
           />
           <button
             type="submit"
-            className="px-4 py-2 bg-black/500 text-white rounded-lg hover:bg-black/600"
+            className="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-900 cursor-pointer"
           >
             Add
           </button>
@@ -86,7 +86,7 @@ function App() {
                   type="checkbox"
                   checked={todo.completed}
                   onChange={() => toggleTodo(todo)}
-                  className="h-5 w-5 accent-black/500"
+                  className="h-5 w-5 accent-black"
                 />
                 <span
                   className={`flex-1 ${todo.completed ? "line-through text-gray-400" : "text-gray-800"}`}
