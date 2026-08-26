@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-const API_URL = import.meta.env.VITE_API_URL || "https://todo-app-rho-sandy-29.vercel.app"
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000"
 
 function App() {
   const [todos, setTodos] = useState([])
@@ -61,11 +61,11 @@ function App() {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Add a new todo..."
-            className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black/500"
           />
           <button
             type="submit"
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+            className="px-4 py-2 bg-black/500 text-white rounded-lg hover:bg-black/600"
           >
             Add
           </button>
@@ -86,7 +86,7 @@ function App() {
                   type="checkbox"
                   checked={todo.completed}
                   onChange={() => toggleTodo(todo)}
-                  className="h-5 w-5 accent-blue-500"
+                  className="h-5 w-5 accent-black/500"
                 />
                 <span
                   className={`flex-1 ${todo.completed ? "line-through text-gray-400" : "text-gray-800"}`}
